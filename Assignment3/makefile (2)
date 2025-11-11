@@ -1,0 +1,11 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -O2
+LDFLAGS = -lcrypto
+
+all: detect_dups
+
+detect_dups: detect_dups.c
+	$(CC) $(CFLAGS) detect_dups.c -o detect_dups $(LDFLAGS)
+
+clean:
+	rm -f detect_dups
