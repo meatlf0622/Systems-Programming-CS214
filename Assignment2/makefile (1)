@@ -1,0 +1,9 @@
+CC = gcc
+CFLAGS = -O3 -shared -fPIC -lm
+
+
+all: libkernel.so
+
+
+libkernel.so: kernel.c
+	$(CC) $(CFLAGS) -o libkernel.so kernel.c
